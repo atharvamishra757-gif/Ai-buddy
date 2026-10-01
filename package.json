@@ -1,0 +1,23 @@
+{
+  "name": "study-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered Student Study Planner for college/university students",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node test/run.mjs",
+    "test:api": "node test/e2e.mjs",
+    "test:ui": "node test/frontend.mjs",
+    "test:imports": "node test/imports.mjs",
+    "migrate": "node server/migrate-to-mongo.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "mongodb": "^7.7.0"
+  }
+}
