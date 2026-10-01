@@ -457,7 +457,7 @@ for (const label of [
   "Calendar",
   "Focus",
   "Analytics",
-  "Study AI",
+  "Ai-Buddy",
   "Settings",
 ]) {
   ok(`nav has ${label}`, shellTxt.includes(label));
@@ -512,7 +512,7 @@ if (liveShell.length) {
       "Calendar",
       "Focus",
       "Analytics",
-      "Study AI",
+      "Ai-Buddy",
       "Settings",
     ].every((l) => liveTxt.includes(l)),
   );

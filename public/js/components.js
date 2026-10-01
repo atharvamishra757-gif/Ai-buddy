@@ -945,7 +945,7 @@ export function insightCard(insight) {
 
 /* ================= Misc ================= */
 
-export function aiNote(message, { title = "Study AI" } = {}) {
+export function aiNote(message, { title = "Ai-Buddy" } = {}) {
   return h(
     "div",
     { class: "ai-note" },

@@ -141,12 +141,12 @@ export async function aiPage({ user, refresh }) {
 
   // Greeting grounded in real data
   const first = dashboard.subjects[0];
-  const greeting = `Hi ${user?.name?.split(' ')[0] || 'there'} — I'm **Study AI**. I reason over your actual planner: ${dashboard.subjects.length} subjects, ${dashboard.exams.length} exams, ${fmtMinutes(dashboard.today.totalMinutes)} planned today, and a ${dashboard.streak}-day streak.\n\n${first ? `Right now your top priority is **${first.name}** (${first.preparation}% prepared${first.daysToExam !== null ? `, exam in ${first.daysToExam} days` : ''}).` : ''}\n\nAsk me anything, or tap a suggestion below.`;
+  const greeting = `Hi ${user?.name?.split(' ')[0] || 'there'} — I'm **Ai-Buddy**. I reason over your actual planner: ${dashboard.subjects.length} subjects, ${dashboard.exams.length} exams, ${fmtMinutes(dashboard.today.totalMinutes)} planned today, and a ${dashboard.streak}-day streak.\n\n${first ? `Right now your top priority is **${first.name}** (${first.preparation}% prepared${first.daysToExam !== null ? `, exam in ${first.daysToExam} days` : ''}).` : ''}\n\nAsk me anything, or tap a suggestion below.`;
 
   container.append(
     h('div', { class: 'page-head' },
       h('div', { class: 'grow' },
-        h('h2', {}, icon('ai', 18), ' Study AI'),
+        h('h2', {}, icon('ai', 18), ' Ai-Buddy'),
         h('p', {}, 'Every answer is grounded in your real subjects, exams, deadlines and study history — not generic advice.')),
       h('span', { class: `badge ${status.mode === 'live' ? 'ok' : ''}` },
         h('span', { class: 'badge-dot' }), status.mode === 'live' ? `Live · ${status.model}` : 'Local engine')),

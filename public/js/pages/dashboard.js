@@ -106,11 +106,11 @@ export async function dashboardPage({ user, refresh }) {
           h('div', { class: 'card-head' },
             h('h3', {}, icon('sparkles', 16), ' AI recommendations'),
             h('div', { class: 'spacer' }),
-            h('button', { class: 'btn btn-sm btn-ghost btn-icon', title: 'Ask Study AI', onclick: () => navigate('ai') }, icon('ai', 16))),
+            h('button', { class: 'btn btn-sm btn-ghost btn-icon', title: 'Ask Ai-Buddy', onclick: () => navigate('ai') }, icon('ai', 16))),
           h('div', { class: 'card-pad' },
             topInsights.length ? h('div', {}, topInsights.map(insightCard)) : emptyState({ ic: 'sparkles', title: 'No insights yet' }),
             h('div', { class: 'mt-2' },
-              h('button', { class: 'btn btn-sm btn-block', onclick: () => navigate('ai') }, icon('ai', 14), 'Ask Study AI')))),
+              h('button', { class: 'btn btn-sm btn-block', onclick: () => navigate('ai') }, icon('ai', 14), 'Ask Ai-Buddy')))),
 
         // Upcoming exams
         h('div', { class: 'card' },

@@ -15,7 +15,7 @@ function brandBlock() {
     h(
       "div",
       {},
-      h("div", { class: "brand-name" }, "Study AI"),
+      h("div", { class: "brand-name" }, "Ai-Buddy"),
       h("div", { class: "brand-sub" }, "Smart planner"),
     ),
   );

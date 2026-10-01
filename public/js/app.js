@@ -161,7 +161,7 @@ export async function rescheduleSession(session, { onDone } = {}) {
   }
 }
 
-export function showAiMessage(message, title = "Study AI") {
+export function showAiMessage(message, title = "Ai-Buddy") {
   const m = modal({
     title,
     body: h(

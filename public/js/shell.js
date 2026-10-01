@@ -10,7 +10,7 @@ export const ROUTES = [
   { id: 'calendar', label: 'Calendar', icon: 'calendar', title: 'Calendar', sub: 'Everything in one month view' },
   { id: 'focus', label: 'Focus', icon: 'focus', title: 'Focus Mode', sub: 'Distraction-free study timer' },
   { id: 'analytics', label: 'Analytics', icon: 'chart', title: 'Analytics', sub: 'Where your time actually goes' },
-  { id: 'ai', label: 'Study AI', icon: 'ai', title: 'Study AI', sub: 'Ask anything about your plan' },
+  { id: 'ai', label: 'Ai-Buddy', icon: 'ai', title: 'Ai-Buddy', sub: 'Ask anything about your plan' },
   { id: 'settings', label: 'Settings', icon: 'settings', title: 'Settings', sub: 'Availability, goals and account' },
 ];
 
@@ -73,7 +73,7 @@ export function buildShell({ route, onNavigate, onLogout, onRefreshNotifications
     h('div', { class: 'brand' },
       h('div', { class: 'brand-mark' }, 'S'),
       h('div', { style: { minWidth: '0' } },
-        h('div', { class: 'brand-name trunc' }, 'Study AI'),
+        h('div', { class: 'brand-name trunc' }, 'Ai-Buddy'),
         h('div', { class: 'brand-sub trunc' }, user?.course || 'Planner'))),
     nav,
     h('div', { class: 'sidebar-foot' },
