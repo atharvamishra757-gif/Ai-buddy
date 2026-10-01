@@ -3,3 +3,4 @@ server/data/db.json
 server/data/db.json.tmp
 .DS_Store
 *.log
+vercel.json 
