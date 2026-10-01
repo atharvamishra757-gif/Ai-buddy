@@ -1054,7 +1054,7 @@ async function route(req, res) {
  * Boot
  * ------------------------------------------------------------------ */
 
-const server = http.createServer(async (req, res) => {
+export async function handleRequest(req, res) {
   // CORS headers (useful when running tests against a separate port)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE,OPTIONS');
@@ -1070,11 +1070,16 @@ const server = http.createServer(async (req, res) => {
       res.end(JSON.stringify({ error: 'Internal server error' }));
     }
   }
-});
+}
 
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Study AI server running at http://localhost:${PORT}`);
-});
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 
-process.on('SIGTERM', () => { flushSync(); process.exit(0); });
-process.on('SIGINT', () => { flushSync(); process.exit(0); });
+if (isMain) {
+  const server = http.createServer(handleRequest);
+  server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Study AI server running at http://localhost:${PORT}`);
+  });
+
+  process.on('SIGTERM', () => { flushSync(); process.exit(0); });
+  process.on('SIGINT', () => { flushSync(); process.exit(0); });
+}
